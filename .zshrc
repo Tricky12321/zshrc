@@ -3,8 +3,7 @@
 export PATH="/sbin:$PATH"
 export PATH="/usr/sbin:$PATH"
 export PATH="/usr/bin:$PATH"
-export PATH="/usr/bin/vendor_perl:$PATH"
-export PATH="/home/knox/scripts:$PATH"
+export PATH="/home/tricky/scripts:$PATH"
 
 ###
 ### GLOBAL ZSH CONFIGURATION
@@ -17,6 +16,9 @@ autoload -U zmv
 autoload -U colors && colors
 autoload -U promptinit && promptinit
 autoload -U url-quote-magic && zle -N self-insert url-quote-magic
+
+PROMPT='%F{red}%n%f@%F{blue}%m%f %F{yellow}%1~%f %# '
+RPROMPT='[%F{RED}%?%f]'
 
 # Automatically quote URLs
 autoload -Uz bracketed-paste-magic
@@ -51,6 +53,8 @@ zstyle ':completion:*:approximate:*' max-errors 1 numeric
 zstyle ':completion:*:kill:*' command 'ps -au $USER -o pid,%cpu,tty,cputime,cmd'
 zstyle ':completion:*:*:kill:*' menu select
 zstyle ':completion:*:kill:*' force-list always
+
+
 
 # History configuration
 HISTSIZE=2000
