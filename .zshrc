@@ -174,7 +174,8 @@ else
     export TERM='xterm-color'
 fi
 
-
+### GIT SYNC
+alias sync-zshrc='cd;rm -Rf zshrc; rm -f .zshrc; git clone https://github.com/Tricky12321/zshrc.git; cp zshrc/.zshrc .;reload'
 ###
 ### ALIASES
 ###
