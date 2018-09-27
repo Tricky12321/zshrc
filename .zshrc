@@ -180,7 +180,7 @@ fi
 
 ### GIT SYNC
 alias sync-zshrc='cd;rm -Rf zshrc; rm -f .zshrc; git clone https://github.com/Tricky12321/zshrc.git; cp zshrc/.zshrc .;reload'
-alias update-zshrc='cd;rm -f zshrc/.zshrc;cp .zshrc zshrc/;cd zshrc;git commit -a -m"Update";git push'
+alias update-zshrc='cd;rm -f zshrc/.zshrc;cp .zshrc zshrc/;cd zshrc;git commit -a -m"Update";git push;cd'
 ###
 ### ALIASES
 ###
