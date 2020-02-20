@@ -184,6 +184,7 @@ alias update-zshrc='cd;rm -f zshrc/.zshrc;cp .zshrc zshrc/;cd zshrc;git commit -
 ###
 ### ALIASES
 ###
+alias remove-orphans='pacman -Rns $(pacman -Qtdq)'
 alias bigtext='setfont ter-132b'
 alias fixdir='sudo find . -type d -exec chmod 770 {} \;'
 alias fixfile='sudo find . -type f -exec chmod 660 {} \;'
