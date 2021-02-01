@@ -4,6 +4,11 @@ export PATH="/sbin:$PATH"
 export PATH="/usr/sbin:$PATH"
 export PATH="/usr/bin:$PATH"
 export PATH="/home/tricky/scripts:$PATH"
+export PATH="/opt/texlive/2020/bin/x86_64-linux/:$PATH"
+
+
+# PROTON
+export STEAM_COMPAT_DATA_PATH=$HOME/proton
 
 ###
 ### GLOBAL ZSH CONFIGURATION
@@ -165,6 +170,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 # Misc
 export LANG=en_GB.UTF-8 # Important
+export LC_ALL=C
 export LC_LANG=en_GB.UTF-8
 export LC_TIME=en_GB
 
@@ -192,6 +198,7 @@ alias size-scan-hidden='du -sh * .* | grep -v "/$" | sort -rh'
 alias extract-rar-recursive='find . -name "*.rar" -exec unrar x '{}' \;'
 alias setkeys='xkbcomp -w 0 xkbmap $DISPLAY'
 alias pacman='sudo pacman'
+alias mv-rsync='f() {rsync -avzh --remove-source-files --progress $1 $2};f'
 alias ll='ls -lAh'
 alias la='ls -lAh'
 alias ls='ls -hG'
