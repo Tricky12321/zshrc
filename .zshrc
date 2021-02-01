@@ -197,7 +197,6 @@ alias size-scan-hidden='du -sh * .* | grep -v "/$" | sort -rh'
 alias extract-rar-recursive='find . -name "*.rar" -exec unrar x '{}' \;'
 alias setkeys='xkbcomp -w 0 xkbmap $DISPLAY'
 alias pacman='sudo pacman'
-alias mv-rsync='f() {rsync -avzh --remove-source-files --progress $1 $2};f'
 alias ll='ls -lAh'
 alias la='ls -lAh'
 alias ls='ls -hG'
@@ -235,7 +234,7 @@ refresh_shell() {
     fi
 }
 
-mvrsync() {
+mv-rsync() {
 	rsync -avzh --remove-source-files --progress $1 $2;
 }
 extract() {
