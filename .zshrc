@@ -234,7 +234,7 @@ refresh_shell() {
     fi
 }
 
-mv-rsync() {
+mvrsync() {
 	rsync -avzh --remove-source-files --progress $1 $2;
 }
 extract() {
