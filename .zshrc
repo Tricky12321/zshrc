@@ -36,7 +36,6 @@ export LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;
 
 # Fix sshfs completions
 compdef sshfs=scp
-
 zstyle ':completion:*:*:cd:*:directory-stack' menu select
 zstyle ':completion:*' menu select
 zstyle ":completion:*:commands" rehash 1
@@ -225,6 +224,7 @@ alias -s log="less"
 ###
 ### HANDY FUNCTIONS
 ###
+compdef mv-rsync=mv
 
 # Shell colors
 refresh_shell() {
@@ -235,6 +235,9 @@ refresh_shell() {
     fi
 }
 
+mvrsync() {
+	rsync -avzh --remove-source-files --progress $1 $2;
+}
 extract() {
 	last_arg=$*[$#];
 	if [ -d last_arg -o ! -f $last_arg -a $# -gt 1 ]; then
