@@ -189,6 +189,7 @@ alias update-zshrc='cd;rm -f zshrc/.zshrc;cp .zshrc zshrc/;cd zshrc;git commit -
 ###
 ### ALIASES
 ###
+alias install-yay='pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si'
 alias remove-orphans='pacman -Rns $(pacman -Qtdq)'
 alias fixdir='sudo find . -type d -exec chmod 770 {} \;'
 alias fixfile='sudo find . -type f -exec chmod 660 {} \;'
