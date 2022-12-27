@@ -168,10 +168,10 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 # Misc
-export LANG=en_GB.UTF-8 # Important
-export LC_ALL=C
-export LC_LANG=en_GB.UTF-8
-export LC_TIME=en_GB
+export LANG=en_DK.UTF-8 # Important
+export LC_ALL=en_DK.UTF-8
+export LC_LANG=en_DK.UTF-8
+export LC_TIME=en_DK
 
 # Default options passed to less (search incase sensitive, don't count line numbers)
 export LESS='-InSR'
