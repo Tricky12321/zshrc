@@ -1,4 +1,6 @@
-
+# VIM EDITOR
+export VISUAL=vim
+export EDITOR="$VISUAL"
 # PATH
 export PATH="/sbin:$PATH"
 export PATH="/usr/sbin:$PATH"
@@ -6,7 +8,8 @@ export PATH="/usr/bin:$PATH"
 export PATH="/home/tricky/scripts:$PATH"
 export PATH="/opt/texlive/2020/bin/x86_64-linux/:$PATH"
 
-
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 # PROTON
 export STEAM_COMPAT_DATA_PATH=$HOME/proton
 
@@ -218,6 +221,17 @@ alias cp='cp -i'
 alias highlight="/usr/bin/vendor_perl/ack -i --color-match='bold red' --passthru"
 alias jobs='jobs -l'
 
+
+### BUSYLIGHT
+alias busy-green='curl -s http://localhost:9999/light/0/on\?color\=green'
+alias busy-on='curl -s http://localhost:9999/light/0/on'
+alias busy-pink='curl -s http://localhost:9999/light/0/on\?color\=purple'
+alias busy-white='curl -s http://localhost:9999/light/0/on\?color\=white'
+alias busy-red='curl -s http://localhost:9999/light/0/on\?color\=red'
+alias busy-off='curl -s http://localhost:9999/light/0/off'
+alias busy-blue='curl -s http://localhost:9999/light/0/on\?color\=0000ff'
+alias busy-yellow='curl -s http://localhost:9999/light/0/on\?color\=ffaa00'
+alias busy-rainbow='curl -s http://localhost:9999/light/0/rainbow\?speed=fast'
 # Alias suffixes (kinda 'open with' functionality)
 alias -s log="less"
 
@@ -337,3 +351,11 @@ diff() {
 # Ensure the shell prompt is set correctly
 refresh_shell
 
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
