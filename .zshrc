@@ -192,6 +192,8 @@ alias update-zshrc='cd;rm -f zshrc/.zshrc;cp .zshrc zshrc/;cd zshrc;git commit -
 ###
 ### ALIASES
 ###
+alias paste-delay='sleep 4; xdotool type "$(xclip -o -selection clipboard)"'
+alias copy-to-clipboard='xclip -sel c <'
 alias ports-in-use='sudo lsof -i -P -n | grep LISTEN'
 alias install-yay='pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si'
 alias remove-orphans='pacman -Rns $(pacman -Qtdq)'
